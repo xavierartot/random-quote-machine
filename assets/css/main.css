@@ -1,0 +1,42 @@
+/* line 1, ../sass/main.scss */
+body { background-color: #4ec2e7; transition: background 1s; }
+
+/* line 5, ../sass/main.scss */
+.wrap { position: relative; }
+
+/* line 8, ../sass/main.scss */
+.coffee { width: 100%; text-align: center; }
+/* line 11, ../sass/main.scss */
+.coffee__h1 { font: bold 40px/1 "Helvetica Neue", Helvetica, Arial, sans-serif; color: #fff; text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 2px 0 #bbbbbb, 0 1px 0 #b9b9b9, 0 2px 0 #aaaaaa, 0 2px 1px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.25), 0 3px 3px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.15); width: 100%; text-align: center; }
+/* line 22, ../sass/main.scss */
+.coffee__content { font-size: 1.5em; background-color: #000; padding: 10px; color: #fff; font-family: sans-serif; letter-spacing: .04em; margin-left: auto; margin-right: auto; padding: 1em; max-width: 22em; }
+
+/* line 35, ../sass/main.scss */
+.copyleft { margin-top: 1em; margin-bottom: 2em; text-align: end; text-align: center; font-size: 1.3em; }
+/* line 41, ../sass/main.scss */
+.copyleft a, .copyleft p { display: inline; font-size: 1em; transition: color 1s; color: #fff; }
+/* line 46, ../sass/main.scss */
+.copyleft a img, .copyleft p img { width: 1em; }
+
+/* line 51, ../sass/main.scss */
+.box { position: absolute; top: 50%; left: 50%; min-height: 300px; min-width: 50%; transform: translateX(-50%) translateY(0%); background-color: white; padding: 30px; border-radius: 1em; margin-bottom: 2em; color: #0e8dbc; font-size: 1.4em; }
+/* line 64, ../sass/main.scss */
+.box__quote { width: 80%; margin-left: 75px; font-size: 1.5em; transition: color 1s; }
+/* line 70, ../sass/main.scss */
+.box__author { width: 90%; float: right; text-align: right; transition: color 1s; }
+/* line 76, ../sass/main.scss */
+.box__link { display: block; position: relative; float: left; top: 0; left: 0; background-color: #4ec2e7; color: #fff; margin-bottom: 1em; margin-top: 4em; transition: background 1s; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; width: 7em; height: 2.4em; text-align: center; line-height: 2.1em; text-decoration: initial; margin-top: 2em; margin-left: 3em; animation: all 300ms linear; border: 0 none; }
+/* line 99, ../sass/main.scss */
+.box__link:active { -webkit-box-shadow: inset 0 0 0 1px #27496d,inset 0 5px 30px #193047; -moz-box-shadow: inset 0 0 0 1px #27496d,inset 0 5px 30px #193047; box-shadow: inset 0 0 0 1px #27496d,inset 0 5px 30px #193047; }
+/* line 104, ../sass/main.scss */
+.box__link:hover { opacity: 0.9; border: 0 none; }
+/* line 111, ../sass/main.scss */
+.box svg { position: relative; top: 0; display: block; font-size: 2em; width: 80px; height: 80px; fill: #0e8dbc; transition: color 1s; }
+/* line 121, ../sass/main.scss */
+.box .box__svg--color { transition: fill 1s; }
+/* line 124, ../sass/main.scss */
+.box__svg--right { float: right; margin-top: 0.6em; }
+/* line 128, ../sass/main.scss */
+.box__svg--left { fill: red; }
+
+/*# sourceMappingURL=main.css.map */
