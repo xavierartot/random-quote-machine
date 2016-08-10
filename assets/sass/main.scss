@@ -38,7 +38,7 @@ body {
   text-align: end;
   text-align: center;
   font-size: 1.3em;
-  a,p {
+  a {
     display: inline;
     font-size: 1em;
     transition: color 1s;
@@ -46,6 +46,16 @@ body {
     img {
       width: 1em;
     }
+  }
+  a:first-child {
+    transform: rotate(10deg);
+    display: block;
+    margin-right: 7em;
+  }
+  a:last-child {
+    transform: rotate(-10deg);
+    display: block;
+    margin-left: 7em;
   }
 }
 .box{
@@ -71,7 +81,7 @@ body {
     width: 90%;
     float: right;
     text-align: right;
-    transition:color 1s;
+    transition:color 2s;
   }
   &__link {
     display: block;

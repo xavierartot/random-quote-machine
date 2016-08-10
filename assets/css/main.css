@@ -14,29 +14,33 @@ body { background-color: #4ec2e7; transition: background 1s; }
 /* line 35, ../sass/main.scss */
 .copyleft { margin-top: 1em; margin-bottom: 2em; text-align: end; text-align: center; font-size: 1.3em; }
 /* line 41, ../sass/main.scss */
-.copyleft a, .copyleft p { display: inline; font-size: 1em; transition: color 1s; color: #fff; }
+.copyleft a { display: inline; font-size: 1em; transition: color 1s; color: #fff; }
 /* line 46, ../sass/main.scss */
-.copyleft a img, .copyleft p img { width: 1em; }
+.copyleft a img { width: 1em; }
+/* line 50, ../sass/main.scss */
+.copyleft a:first-child { transform: rotate(10deg); display: block; margin-right: 7em; }
+/* line 55, ../sass/main.scss */
+.copyleft a:last-child { transform: rotate(-10deg); display: block; margin-left: 7em; }
 
-/* line 51, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
 .box { position: absolute; top: 50%; left: 50%; min-height: 300px; min-width: 50%; transform: translateX(-50%) translateY(0%); background-color: white; padding: 30px; border-radius: 1em; margin-bottom: 2em; color: #0e8dbc; font-size: 1.4em; }
-/* line 64, ../sass/main.scss */
+/* line 74, ../sass/main.scss */
 .box__quote { width: 80%; margin-left: 75px; font-size: 1.5em; transition: color 1s; }
-/* line 70, ../sass/main.scss */
-.box__author { width: 90%; float: right; text-align: right; transition: color 1s; }
-/* line 76, ../sass/main.scss */
+/* line 80, ../sass/main.scss */
+.box__author { width: 90%; float: right; text-align: right; transition: color 2s; }
+/* line 86, ../sass/main.scss */
 .box__link { display: block; position: relative; float: left; top: 0; left: 0; background-color: #4ec2e7; color: #fff; margin-bottom: 1em; margin-top: 4em; transition: background 1s; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; width: 7em; height: 2.4em; text-align: center; line-height: 2.1em; text-decoration: initial; margin-top: 2em; margin-left: 3em; animation: all 300ms linear; border: 0 none; }
-/* line 99, ../sass/main.scss */
+/* line 109, ../sass/main.scss */
 .box__link:active { -webkit-box-shadow: inset 0 0 0 1px #27496d,inset 0 5px 30px #193047; -moz-box-shadow: inset 0 0 0 1px #27496d,inset 0 5px 30px #193047; box-shadow: inset 0 0 0 1px #27496d,inset 0 5px 30px #193047; }
-/* line 104, ../sass/main.scss */
+/* line 114, ../sass/main.scss */
 .box__link:hover { opacity: 0.9; border: 0 none; }
-/* line 111, ../sass/main.scss */
-.box svg { position: relative; top: 0; display: block; font-size: 2em; width: 80px; height: 80px; fill: #0e8dbc; transition: color 1s; }
 /* line 121, ../sass/main.scss */
+.box svg { position: relative; top: 0; display: block; font-size: 2em; width: 80px; height: 80px; fill: #0e8dbc; transition: color 1s; }
+/* line 131, ../sass/main.scss */
 .box .box__svg--color { transition: fill 1s; }
-/* line 124, ../sass/main.scss */
+/* line 134, ../sass/main.scss */
 .box__svg--right { float: right; margin-top: 0.6em; }
-/* line 128, ../sass/main.scss */
+/* line 138, ../sass/main.scss */
 .box__svg--left { fill: red; }
 
 /*# sourceMappingURL=main.css.map */
