@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="assets/css/main.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <script type="text/javascript" charset="utf-8">
       $(document).ready(function() {
-var quotes = [
-{"If debugging is the process of removing software bugs, then programming must be the process of putting them in." : "– Edsger Dijkstra (Dutch computer scientist, winner of the 1972 Turing Award)"},
+        var quotes = [
+          {"If debugging is the process of removing software bugs, then programming must be the process of putting them in." : "– Edsger Dijkstra (Dutch computer scientist, winner of the 1972 Turing Award)"},
           {"Measuring programming progress by lines of code is like measuring aircraft building progress by weight." : "– Bill Gates (co-founder of Microsoft)"},
           {"Nine people can’t make a baby in a month.” (regarding the addition of more programmers to get a project completed faster)”" : "– Fred Brooks (American computer scientist, winner of the 1999 Turing Award)"},
           {"Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it." : "– Brian W. Kernighan (Canadian computer scientist, co-author of “C programming language”)"},
@@ -41,22 +41,20 @@ var quotes = [
         // click event
         $('.box__link').on('click', function (event) {
           event.preventDefault();
-          randQuote = getRandomInt(0,19);
+          randQuote = getRandomInt(0,quotes.length);
           // test if the rand number is equal to the new one
           if (randQuote === randTemp ) {
             //recreate a new rand
-            randQuote = getRandomInt(0,19);
+            randQuote = getRandomInt(0,quotes.length);
           }
 
           // loop
-          //the first loop is to get quotes[0]
-          $.each(quotes, function(key, val) {
-            // I get a quote with a rand number
+          // I get a quote with a rand number
             $.each(quotes[randQuote],function (citation,author ) {
               authorTemp=author;
               citationTemp=citation;
             });
-          });
+
           // I assign the old rand number to randTemp
           randTemp = randQuote;
 
