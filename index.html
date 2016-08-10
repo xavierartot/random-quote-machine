@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="assets/css/main.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <script type="text/javascript" charset="utf-8">
       $(document).ready(function() {
-        var quotes = [
-          {"If debugging is the process of removing software bugs, then programming must be the process of putting them in." : "– Edsger Dijkstra (Dutch computer scientist, winner of the 1972 Turing Award)"},
+var quotes = [
+{"If debugging is the process of removing software bugs, then programming must be the process of putting them in." : "– Edsger Dijkstra (Dutch computer scientist, winner of the 1972 Turing Award)"},
           {"Measuring programming progress by lines of code is like measuring aircraft building progress by weight." : "– Bill Gates (co-founder of Microsoft)"},
           {"Nine people can’t make a baby in a month.” (regarding the addition of more programmers to get a project completed faster)”" : "– Fred Brooks (American computer scientist, winner of the 1999 Turing Award)"},
           {"Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it." : "– Brian W. Kernighan (Canadian computer scientist, co-author of “C programming language”)"},
@@ -31,34 +31,41 @@
           {"Like car accidents, most hardware problems are due to driver error." :  "- unknown"},
           {"If at first you don't succeed; call it version 1.0":  "- unknown"}
         ];
+        //function rand improved
         function getRandomInt(min, max) {
           min = Math.ceil(min);
           max = Math.floor(max);
           return Math.floor(Math.random() * (max - min)) + min;
         }
         var index=0, randQuote=0, randTemp=0, quote='', authorTemp='', citationTemp='';
+        // click event
         $('.box__link').on('click', function (event) {
           event.preventDefault();
-          //console.log('randQuote : '+ randQuote );
           randQuote = getRandomInt(0,19);
+          // test if the rand number is equal to the new one
           if (randQuote === randTemp ) {
+            //recreate a new rand
             randQuote = getRandomInt(0,19);
-          } 
+          }
+
+          // loop
+          //the first loop is to get quotes[0]
           $.each(quotes, function(key, val) {
-            if (index <= 3) {
-              index++;
-            } 
-            //console.log(quotes[randQuote]);
+            // I get a quote with a rand number
             $.each(quotes[randQuote],function (citation,author ) {
               authorTemp=author;
               citationTemp=citation;
             });
           });
+          // I assign the old rand number to randTemp
           randTemp = randQuote;
+
+          // handle the DOM with the retrieve quote
           $('.box__author, .box__quote').hide();
           $('.box__quote').html(citationTemp ).fadeIn(400,function () {
             $('.box__author').html(authorTemp  ).delay(500).fadeIn(400);
           });
+          // handle color 
           //http://stackoverflow.com/questions/5897573/jquery-random-background-color-and-color-on-2-divs
           var backColor = ["rgb(237, 85, 100)","rgb(252, 206, 84)","rgb(71, 206, 192)",
           "rgb(203, 147, 238)", "rgb(237, 95, 85)", "rgb(195, 213, 105)","rgb(78, 194, 231)",
@@ -66,13 +73,11 @@
           "rgb(250, 177, 83)","rgb(66, 203, 111)","rgb(147, 152, 236)",
           "rgb(199, 203, 212)"];
           var randColor = backColor[Math.floor(Math.random() * backColor.length)];
-
           $('body').css({'background':randColor}).find('svg').removeClass('box__svg--color')
           .addClass('box__svg--color')
           .css('fill', randColor );
             $('.box__link').css('background', randColor);
             $('.box__quote, .box__author ').css('color', randColor);
-
         });
       });
     </script>    
@@ -110,16 +115,6 @@
           <a class='box__link box__link--active' href=''>new quote</a>
         </div>
       </div>
-
-      <!--<footer>-->
-        <!--<a href="https://en.wikipedia.org/wiki/Copyleft" target="_blank" class='footer'>-->
-          <!--<img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Cc-sa.svg" alt="copyleft image">-->
-          <!--copyleft-->
-        <!--</a>-->
-        <!--by -->
-        <!--<a href='http://codepen.io/xavierartot/full/PzBLXW/' target='_blank'>xavier Artot</a>-->
-      <!--</footer>-->
     </div>
-
   </body>
 </html>
